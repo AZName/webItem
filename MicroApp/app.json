@@ -1,0 +1,34 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/weather/weather",
+    "pages/menu/menu",
+    "pages/menuDetail/menuDetail"
+    
+  ],
+  "window": {
+    "navigationBarTitleText": "Demo",
+    "navigationBarBackgroundColor": "#d81e06"
+    
+  },
+  "tabBar": {
+    "selectedColor": "#d81e06",
+    "backgroundColor": "#ffffff",
+
+    "list": [{
+      "pagePath": "pages/index/index",
+      "text": "食谱",
+      "iconPath":"pages/src/tabar/recipe_nol.png",
+      "selectedIconPath":"pages/src/tabar/recipe_sele.png"
+    },{
+      "pagePath":"pages/weather/weather",
+      "text":"天气",
+      "iconPath":"pages/src/tabar/weather_nol.png",
+      "selectedIconPath":"pages/src/tabar/weather_sele.png"
+    }]
+
+  },
+  
+  "debug": true
+}
+

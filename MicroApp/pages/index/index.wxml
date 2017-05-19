@@ -1,0 +1,10 @@
+
+<view class="body">
+    <view class="type" wx:for="{{data.result.childs}}">
+        <view class="title"><text>{{item.categoryInfo.name}}</text></view>
+        <navigator class="typeItem" wx:for="{{item.childs}}" url="../menu/menu?ctgid={{item.categoryInfo.ctgId}}&name={{item.categoryInfo.name}}">      <view class="item" >{{item.categoryInfo.name}}</view>
+        </navigator>
+    </view>
+</view>
+
+

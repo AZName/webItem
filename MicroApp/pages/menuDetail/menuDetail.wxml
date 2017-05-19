@@ -1,0 +1,13 @@
+<!--pages/menuDetail/menuDetail.wxml-->
+
+<view class="titleImg"><image src="{{content.img}}"class="img"></image></view>
+<view class="title">{{content.title}}</view>
+<view class="ingredientsName" >
+    <view class="ingredients">材料:</view>
+    <text wx:for="{{ingredients}}">{{item}}</text>
+</view>
+<view class="method"wx:for="{{method}}" >
+    <view class="titleImg" wx:if="{{item.img}}"><image src="{{item.img}}"></image></view>
+    <view class="content"wx:if="{{item.step}}">{{item.step}}</view>
+</view>
+<view class="sumary">总结: {{content.sumary}}</view>

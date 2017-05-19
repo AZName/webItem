@@ -1,0 +1,15 @@
+<!--pages/menu/menu.wxml-->
+
+<scroll-view class="tableView" scroll-y="true" bindscrolltolower="loadMore" lower-threshold="0" >
+
+    <navigator wx:for="{{dataArray}}" url="../menuDetail/menuDetail?id={{item.menuId}}" class="cell" >
+        <image src="{{item.thumbnail}}" class="icon"></image>
+        <view class="title">
+        <text class="name">{{item.name}}</text>
+        <text class="type">{{item.ctgTitles}}</text>
+        </view>
+    </navigator>
+</scroll-view>
+<!--<view class="footed"hidden="{{isHidden}}" >别扯了... 我是有底线的!</view>-->
+
+ 

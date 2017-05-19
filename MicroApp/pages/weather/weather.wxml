@@ -1,0 +1,25 @@
+<!--pages/weather/weather.wxml-->
+
+
+<view class="advertising">这一个小广告</view>
+<view class="headerView">
+    <view class="temperature">{{weather.temperature}}</view>
+    <view class="weather"><text wx:if="{{weather.future[0].dayTime}}">天气:{{weather.future[0].dayTime}}</text><text wx:else="{{weather.future[0].night}}">天气:{{weather.future[0].night}}</text><text>风速:{{weather.wind}}</text></view>
+    <view class="detail"><text>{{weather.date}}</text><text>空气质量: {{weather.airCondition}}</text><text>{{weather.humidity}}</text><text>更新:{{weather.time}}</text></view>
+    <view class="comprehensive">
+<text>空气指数:{{weather.pollutionIndex}}</text><text>运动指数:{{weather.exerciseIndex}}</text><text>穿衣指数:{{weather.dressingIndex}}</text><text>感冒指数:{{weather.coldIndex}}</text><text>洗车指数:{{weather.washIndex}}</text><text>{{weather.humidity}}</text><text>日出时间: {{weather.sunrise}}</text><text>日落时间: {{weather.sunset}}</text>
+    </view>
+</view>
+
+<scroll-view class="tableView" scroll-x="true">
+    <!--天气-->
+    <view class="cell" wx:for="{{weather.future}}"wx:if="{{index}}">
+        <view class="dayTime" wx:if="{{item.dayTime}}">白天天气: {{item.dayTime}}</view>
+        <view class="night">晚上天气: {{item.night}}</view>
+        <view class="temperature2">温度: {{item.temperature}}</view>
+        <view class="week">风向: {{item.wind}}</view>
+        <view class="wind">日期: {{item.week}}</view>
+    </view>
+
+
+</scroll-view>
